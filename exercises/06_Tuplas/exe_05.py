@@ -12,8 +12,6 @@ gasto = []
 
 for dia in dias:
     gasto.append(float(input(f'valor gasto | {dia} | R$: ')))
-
 qtd_sem = int(input('\nMês de quantas semanas: '))
-
 print(f'\nValor gasto na primeira semana: R${sum(gasto)}')
 print(f'Projetando o valor gasto no mês: R${sum(gasto) * qtd_sem}')
