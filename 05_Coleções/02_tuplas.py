@@ -18,13 +18,13 @@ Ex: meses = ('Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho',
 
     dias_da_semana = ('Domingo', 'Segunda', 'Terça', 'Quarta', Quinta', Sexta', Sábado')
 """
-
+'''
 # Criando uma lista
 lista = []
 lista1 = list()
 
 # Criando uma tupla
-tupla = ()
+tupla = ('leonardo')
 tupla1 = tuple()
 
 # quando utilizar uma funcão/método direto na criação da tupla, é necessário ustilizar
@@ -85,6 +85,7 @@ for c, v in enumerate(nomes):
     print(f'Neste índice {c}, temos: {v} ')
 
 
+
 meses = (
     'Janeiro',
     'Fevereiro',
@@ -99,10 +100,43 @@ meses = (
     'Novembro',
     'Dezembro'
 )
-print(meses[0])   # acessando o primeiro valor desta tupla >>> Janeiro
-print(meses[-1])  # acessando o último valor desta tupla >>> Dezembro
+#print(meses[0])   # acessando o primeiro valor desta tupla >>> Janeiro
+#print(meses[-1])  # acessando o último valor desta tupla >>> Dezembro
 
 # acessando o índice de um determinado valor dentro da tupla. Ps. mais aconselhavel
 # utilizar um bloco TRY para que ele tente encontrar este índice, caso não o encontre
 # crie uma EXCEPT para tratamento deste erro.
-print(meses.index('Julho'))
+
+print(meses[5])
+
+print(meses.index('Setembro'))
+
+'''
+
+nomes = ('leonardo', 'maria', 'juca', 'joana')
+
+
+for nome in nomes:
+    vac = str(input(f'{nome}, vc já tomou a vacina? '))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
