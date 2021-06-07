@@ -7,34 +7,39 @@ Ao final apresente os usuários cadastrados de maneira organizada.
 """
 
 usuario = {}
-usuarios = []
+lista_de_usuarios = list()
 
 while True:
-    usuario.update({'nome': str(input('Nome: ')).title()})
-    usuario.update({'idade': int(input('Idade: '))})
-    usuario.update({'telefone': int(input('Telefone (Apenas números): '))})
+    usuario['nome'] = str(input('Nome: ')).title()
+    usuario['idade'] = int(input('Idade: '))
+    usuario['media'] = int(input('Telefone: '))
     print()
-    usuarios.append(usuario.copy())
+    lista_de_usuarios.append(usuario.copy())
     usuario.clear()
 
     while True:
-        saida = str(input('Inserir outro usuário? [S | N]: ')).upper()[0]
-        print()
-        if saida in 'SN':
+        resp = str(input('Inserir novo usuario: ')).upper()
+        if resp in 'SN':
             break
-        print('\033[31mOps, dado inválido!\033[m\n')
+        print('\033[31mDado inválido\033[m, tente S ou N | ', end='')
 
-    if saida == 'N':
+    if resp == 'N':
         break
 
-# imprimindo dados
+# [  {} , {}   ]
+
 print()
 print('=' * 40)
-print('USUÁRIO CADASTRADOS'.center(40))
+print('USUÁRIOS CADASTRADOS'.center(40))
 print('=' * 40)
 
-for u in usuarios:
-    for c, v in u.items():
-        print(f'{c.title():.<8}: {v}')
+for indice in lista_de_usuarios:
+    for c, v in indice.items():
+
+        if c == 'nome':
+            c = c.replace('nome', 'Apelido')
+
         if c == 'telefone':
             print('-' * 40)
+
+        print(f'{c.title():<8} ===> {v}')

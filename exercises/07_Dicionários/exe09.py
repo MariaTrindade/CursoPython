@@ -33,4 +33,3 @@ for v in jogadores.values():
         print(f'{c} --> {v}', end=' ')
         if c == 'tirou':
             print()
-
