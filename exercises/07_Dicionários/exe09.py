@@ -4,32 +4,29 @@ Armazene essas informações em um dicionário. Ao fim, coloque esse dicionário
 sabendo que o vencedor tirou o maior número no dado, informe o nome deste usuário.
 """
 from random import randint
+from operator import itemgetter
+from time import sleep
 
-"""
 jogadas = dict(
-                jogador1=randint(1, 6),
-                jogador2=randint(1, 6),
-                jogador3=randint(1, 6),
-                jogador4=randint(1, 6)
-              )
+    jogador1=randint(1, 6),
+    jogador2=randint(1, 6),
+    jogador3=randint(1, 6),
+    jogador4=randint(1, 6)
+)
 
+resultado = list()
+resultado = sorted(jogadas.items(), key=itemgetter(1), reverse=True)
+
+print('Vamos lá!'.center(40))
 for c, v in jogadas.items():
-    print(f'O {c.title()} tirou: {v} no dado.')
-"""
+    print(f'{c} ===> {v}')
+    sleep(0.5)
 
-jogadores = dict()
-jogador = dict()
+print('\nLegal... agora vamos carregar o ranking!\n')
+sleep(0.5)
 
-for cont in range(4):
-    jogador['nome'] = str(input('Nome: ')).title()
-    jogador['tirou'] = randint(1, 6)
-
-    jogadores[f'{cont + 1}º Jogador'] = jogador.copy()
-    jogador.clear()
-
-print()
-for v in jogadores.values():
-    for c, v in v.items():
-        print(f'{c} --> {v}', end=' ')
-        if c == 'tirou':
-            print()
+print(f'RANKING'.center(40))
+sleep(3)
+for c, v in enumerate(resultado):
+    print(f'{c + 1}º LUGAR ===> {v[0]} tirou {v[1]} no dado!')
+    sleep(1)

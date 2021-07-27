@@ -20,3 +20,4 @@ nome = 'Leonardo'  # variável global, possível acessá-la em qualquer parte do
 print(nome)
 
 print(Cadastro())  # Print já instanciando a função Cadastro
+

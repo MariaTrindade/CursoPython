@@ -42,7 +42,6 @@ else:
 
 # Condição aninhada verificando idade para cnh e autorização em caso de 16 e 17 anos.
 
-
 idade = int(input('idade: '))
 
 if (idade >= 16) and (idade < 18):
