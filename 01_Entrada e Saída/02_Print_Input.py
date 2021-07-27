@@ -23,3 +23,4 @@ print('Muito prazer, {}'.format(nome1))
 
 # Sintaxe atual
 print(f'Muito prazer, {nome1}')
+

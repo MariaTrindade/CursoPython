@@ -18,7 +18,7 @@ Ex: meses = ('Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho',
 
     dias_da_semana = ('Domingo', 'Segunda', 'Terça', 'Quarta', Quinta', Sexta', Sábado')
 """
-'''
+
 # Criando uma lista
 lista = []
 lista1 = list()
@@ -111,7 +111,7 @@ print(meses[5])
 
 print(meses.index('Setembro'))
 
-'''
+
 
 nomes = ('leonardo', 'maria', 'juca', 'joana')
 
